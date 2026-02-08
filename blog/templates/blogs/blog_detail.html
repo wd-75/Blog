@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="max-w-md w-full bg-gray-800 rounded-xl shadow-lg p-6 relative overflow-hidden">
+    <!-- Glowing background ball -->
+    <div class="absolute -top-10 -left-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+    <!-- Blog content -->
+    <h2 class="text-2xl font-bold text-white mb-2 hover:text-purple-300 transition">
+    {{ blog.title }}
+    </h2>
+    <p class="text-gray-400 italic mb-4">
+      {{ blog.slug }}
+    </p>
+    <span class="text-sm text-gray-300">
+    {{ blog.date }}
+    </span>
+    
+
+  <p class="text-gray-200 leading-relaxed">
+    {{ blog.content}}
+    </p>
+
+  </div>
+
+</body>
+</html>
