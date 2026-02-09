@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +30,11 @@
   <p class="text-gray-200 leading-relaxed">
     {{ blog.content}}
     </p>
+
+
+    {% if blog.blog_image %}
+    <img src="{{ blog.blog_image.url }}" alt="{{ blog.title }}">
+{% endif %}
 
   </div>
 
